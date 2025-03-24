@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful</title>
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+
+
+    <style>
+        body {
+    background-color: #f7f9fc; /* Light background for a clean look */
+    font-family: "Nunito", sans-serif;
+}
+
+.card {
+    background: #ffffff;
+    border: none;
+    border-radius: 12px;
+}
+
+.card-title {
+    color: #012970;
+    font-weight: 700;
+}
+
+.card-text {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+.btn-primary {
+    background-color: #4154f1;
+    border-color: #4154f1;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #2b39cc;
+    border-color: #2b39cc;
+}
+
+    </style>
+</head>
+<body>
+    <main class="container d-flex align-items-center justify-content-center vh-100">
+        <div class="card text-center shadow p-4" style="max-width: 500px; border-radius: 12px;">
+            <div class="card-body">
+                <i class="bi bi-check-circle-fill text-success" style="font-size: 3rem;"></i>
+                <h1 class="card-title mt-3">Payment Received</h1>
+                <p class="card-text">
+                    Your payment has been received. We will review your submission shortly, and you will soon receive an email confirmation about your appointment status.
+                </p>
+                <div class="d-flex justify-content-center gap-2 mt-3">
+                    <a href="viewAppointments.php" class="btn btn-primary">
+                        <i class="bi bi-calendar-event"></i> View Your Appointments
+                    </a>
+                    <a href="patient-dashboard.php" class="btn btn-secondary">
+                        <i class="bi bi-house"></i> Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Appointments - Esmile</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!-- <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../newadmin/assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Updated: Apr 20 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="dentist.html" class="logo d-flex align-items-center">
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <span class="d-none d-lg-block">ESMILE</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+
+    
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+ <!-- ======= Sidebar ======= -->
+ <aside id="sidebar" class="sidebar">
+
+  <ul class="sidebar-nav" id="sidebar-nav">
+
+    <li class="nav-item">
+      <a class="nav-link " href="dentist.html">
+        <i class="ri-dashboard-line"></i>
+        <span>Dashboard</span>
+      </a>
+    </li><!-- End Dashboard Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+        <i class="ri-user-settings-line"></i></i><span>Calendar</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a href="calendar.php">
+            <i class="bi bi-circle"></i><span>View Calendar</span>
+          </a>
+        </li>
+        <!-- <li>
+          <a href="#">
+            <i class="bi bi-circle"></i><span>Today's Appointments (gawin list)</span>
+          </a>
+        </li> -->
+        <!-- <li>
+          <a href="#">
+            <i class="bi bi-circle"></i><span>Edit Admin</span>
+          </a>
+        </li> -->
+        <li>
+      </ul>
+    </li><!-- End Components Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+        <i class="ri-calendar-line"></i></i><span>Appointments</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a href="appointments.html">
+            <i class="bi bi-circle"></i><span>View Appointments</span>
+          </a>
+        </li>
+        <li>
+          <a href="setAppointment.php">
+            <i class="bi bi-circle"></i><span>Set Appointment</span>
+          </a>
+        </li>
+        <!-- <li>
+          <a href="#">
+            <i class="bi bi-circle"></i><span>Edit Dentist</span>
+          </a>
+        </li> -->
+      </ul>
+    </li><!-- End Forms Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+        <i class="ri-id-card-line"></i></i><span>Patients</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a href="patientlist.html">
+            <i class="bi bi-circle"></i><span>Patient List</span>
+          </a>
+        </li>
+        <li>
+          <a href="addpatient.html">
+            <i class="bi bi-circle"></i><span>Add Patient</span>
+          </a>
+        </li>
+        <!-- <li>
+          <a href="#">
+            <i class="bi bi-circle"></i><span>Edit Patient</span>
+          </a>
+        </li> -->
+      </ul>
+    </li>
+    <!-- End Tables Nav -->
+
+    <!-- <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+        <i class="ri-calendar-line"></i></i><span>Appointment</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a href="#">
+            <i class="bi bi-circle"></i><span>View Appointments</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bi bi-circle"></i><span>Set Appointment</span>
+          </a>
+        </li>
+      </ul>
+    </li> -->
+    <!-- End Charts Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="../pages-login.html">
+        <i class="ri-login-box-line"></i>
+        <span>Logout</span>
+      </a>
+    </li><!-- End Login Page Nav -->
+
+  </ul>
+
+</aside><!-- End Sidebar-->
+
+
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>Appointments</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="dentist.html">Home</a></li>
+        <li class="breadcrumb-item">Appointments</li>
+        <li class="breadcrumb-item active">List</li>
+      </ol>
+    </nav>
+  </div><!-- End Page Title -->
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Appointments List</h5>
+            <p>These are your upcoming appointments!</p>
+
+            <!-- Search Bar -->
+            <input type="text" id="searchBar" class="form-control mb-3" placeholder="Search appointments..." onkeyup="filterAppointments()">
+
+            <!-- Entries Per Page Dropdown -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div>
+                <label for="entriesPerPage">Show Entries:</label>
+                <select id="entriesPerPage" class="form-select ms-2" onchange="changeEntriesPerPage()">
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- DataTable -->
+            <table id="appointmentsTable" class="table">
+              <thead>
+                <tr>
+                  <th>First Name</th>
+                  <th>Middle Name</th>
+                  <th>Last Name</th>
+                  <th>Service</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Data will be injected here -->
+              </tbody>
+            </table>
+
+            <!-- Pagination Controls -->
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <div id="paginationInfo"></div>
+              <div>
+                <button id="backPageBtn" class="btn btn-secondary me-2" onclick="previousPage()" disabled>Back</button>
+                <button id="nextPageBtn" class="btn btn-primary" onclick="nextPage()" disabled>Next</button>
+              </div>
+            </div>
+
+            <script>
+              let appointmentData = []; // Store fetched data
+              let filteredData = []; // Store filtered data
+              let currentPage = 1; // Track current page
+              let entriesPerPage = 5; // Default number of entries per page
+
+              // Fetch and display appointments
+              fetch('fetch-patient-appointments.php')
+                .then(response => response.json())
+                .then(data => {
+                  const tableBody = document.querySelector("#appointmentsTable tbody");
+
+                  if (data.error) {
+                    tableBody.innerHTML = `<tr><td colspan="7">${data.error}</td></tr>`;
+                  } else {
+                    appointmentData = data;
+                    filteredData = filterUpcomingAppointments(appointmentData); // Filter out past appointments
+                    displayAppointments(filteredData, currentPage); // Display first page
+                    updatePaginationInfo(filteredData.length);
+                  }
+                })
+                .catch(error => {
+                  console.error('Error:', error);
+                  document.querySelector("#appointmentsTable tbody").innerHTML =
+                    `<tr><td colspan="7">Error loading data</td></tr>`;
+                });
+
+              // Function to filter out past appointments
+              function filterUpcomingAppointments(data) {
+                const now = new Date(); // Get the current date and time
+                return data.filter(row => {
+                  const appointmentDateTime = new Date(`${row.Date} ${row.Time}`);
+                  return appointmentDateTime >= now; // Keep only future appointments
+                });
+              }
+
+              // Function to display sorted and paginated appointments
+              function displayAppointments(data, page) {
+                const tableBody = document.querySelector("#appointmentsTable tbody");
+                tableBody.innerHTML = ""; // Clear table before adding new rows
+
+                // Sort data by date and time
+                const sortedData = data.sort((a, b) => {
+                  const dateA = new Date(`${a.Date} ${a.Time}`);
+                  const dateB = new Date(`${b.Date} ${b.Time}`);
+                  return dateA - dateB; // Ascending order
+                });
+
+                // Calculate start and end indices for pagination
+                const startIndex = (page - 1) * entriesPerPage;
+                const endIndex = startIndex + entriesPerPage;
+                const paginatedData = sortedData.slice(startIndex, endIndex);
+
+                // If no appointments, display a message
+                if (paginatedData.length === 0) {
+                  tableBody.innerHTML = `<tr><td colspan="7">No appointments found</td></tr>`;
+                  return;
+                }
+
+                // Populate the table with paginated data
+                paginatedData.forEach(row => {
+                  const tr = document.createElement('tr');
+                  tr.innerHTML = `
+                    <td>${row.First_Name}</td>
+                    <td>${row.Middle_Name || ''}</td>
+                    <td>${row.Last_Name}</td>
+                    <td>${row.Description}</td>
+                    <td>${row.Date}</td>
+                    <td>${convertTo12Hour(row.Time)}</td>
+                    <td>${row.Notes || 'N/A'}</td>
+                  `;
+                  // tr.addEventListener('click', () => {
+                  //   window.location.href = `appointment-details.php?id=${encodeURIComponent(row.appointment_id)}`;
+                  // });
+                  tableBody.appendChild(tr);
+                });
+
+                // Enable/disable Back and Next buttons based on current page
+                const backPageBtn = document.getElementById("backPageBtn");
+                const nextPageBtn = document.getElementById("nextPageBtn");
+                backPageBtn.disabled = page === 1;
+                nextPageBtn.disabled = endIndex >= data.length;
+              }
+
+              // Function to convert 24-hour time to 12-hour format
+              function convertTo12Hour(time24) {
+                if (!time24) return '';
+
+                const [hours24, minutes] = time24.split(':');
+                const hours = parseInt(hours24);
+                const period = hours >= 12 ? 'PM' : 'AM';
+                const hours12 = hours % 12 || 12;
+
+                return `${hours12}:${minutes} ${period}`;
+              }
+
+              // Function to filter appointments based on search input
+              function filterAppointments() {
+                const searchValue = document.getElementById("searchBar").value.toLowerCase();
+                filteredData = filterUpcomingAppointments(appointmentData).filter(row =>
+                  row.First_Name.toLowerCase().includes(searchValue) ||
+                  row.Middle_Name?.toLowerCase().includes(searchValue) ||
+                  row.Last_Name.toLowerCase().includes(searchValue) ||
+                  row.Description.toLowerCase().includes(searchValue) ||
+                  row.Notes?.toLowerCase().includes(searchValue)
+                );
+
+                currentPage = 1; // Reset to first page
+                displayAppointments(filteredData, currentPage);
+                updatePaginationInfo(filteredData.length);
+              }
+
+              // Function to go to the next page
+              function nextPage() {
+                currentPage++;
+                displayAppointments(filteredData, currentPage);
+                updatePaginationInfo(filteredData.length);
+              }
+
+              // Function to go to the previous page
+              function previousPage() {
+                currentPage--;
+                displayAppointments(filteredData, currentPage);
+                updatePaginationInfo(filteredData.length);
+              }
+
+              // Function to change the number of entries per page
+              function changeEntriesPerPage() {
+                entriesPerPage = parseInt(document.getElementById("entriesPerPage").value);
+                currentPage = 1; // Reset to first page
+                displayAppointments(filteredData, currentPage);
+                updatePaginationInfo(filteredData.length);
+              }
+
+              // Function to update pagination information
+              function updatePaginationInfo(totalEntries) {
+                const startIndex = (currentPage - 1) * entriesPerPage + 1;
+                const endIndex = Math.min(startIndex + entriesPerPage - 1, totalEntries);
+                document.getElementById("paginationInfo").innerText =
+                  `Showing ${startIndex} to ${endIndex} of ${totalEntries} entries`;
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      <!-- &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved -->
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

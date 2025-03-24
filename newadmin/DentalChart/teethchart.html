@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adult Teeth Chart - Dentist Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Adult Teeth Chart - Dentist Panel</h1>
+    <p>Click on a tooth to change its status.</p>
+  </header>
+
+  <main>
+    <section class="chart-container">
+      <!-- Upper teeth row -->
+      <div class="teeth-row upper-teeth" id="upper-teeth">
+        <!-- Upper teeth will be dynamically rendered here -->
+      </div>
+      
+      <!-- Lower teeth row -->
+      <div class="teeth-row lower-teeth" id="lower-teeth">
+        <!-- Lower teeth will be dynamically rendered here -->
+      </div>
+    </section>
+
+    <!-- Dentist Panel -->
+    <section class="dentist-panel">
+      <h3>Patient and Tooth Status Update</h3>
+      <form id="tooth-form">
+        <!-- Patient Information -->
+        <div class="patient-info">
+          <label for="patient-name">Patient Name:</label>
+          <input type="text" id="patient-name" name="patient-name" required>
+
+          <label for="patient-age">Age:</label>
+          <input type="number" id="patient-age" name="patient-age" required>
+
+          <label for="patient-contact">Contact Info:</label>
+          <input type="text" id="patient-contact" name="patient-contact" required>
+        </div>
+
+        <!-- Tooth Update -->
+        <label for="tooth-number">Tooth Number:</label>
+        <input type="number" id="tooth-number" name="tooth-number" min="1" max="32" required>
+
+        <label for="tooth-status">Status:</label>
+        <select id="tooth-status" name="tooth-status" required>
+          <option value="healthy">Healthy</option>
+          <option value="cavity">Cavity</option>
+          <option value="denture">Denture</option>
+          <option value="missing">Missing</option>
+        </select>
+
+        <button type="submit">Update Status</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Teeth Chart Inc. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

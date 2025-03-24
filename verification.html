@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="position: sticky; top: 0; z-index: 1030;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">ESMILE</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html#hero">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card shadow-sm p-4" style="width: 100%; max-width: 450px;">
+            <h1 class="text-center mb-4">Email Verification</h1>
+            <form action="verification.php" method="POST">
+                <div class="mb-3">
+                    <label for="verification_code" class="form-label">Verification Code</label>
+                    <input type="text" name="verification_code" id="verification_code" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Verify Email</button>
+            </form>
+            
+            <p class="text-center mt-3">
+                <a href="pages-login.html" class="text-decoration-none">Back to Login</a>
+            </p>
+            
+            <p class="text-center mt-3" id="timer-text">Resend code in <span id="timer">30</span> seconds</p>
+            <button id="resend-btn" class="btn btn-secondary w-100" disabled onclick="resendCode()">Resend Verification Code</button>
+        </div>
+    </div>
+
+    <script>
+        let timeLeft = 30; 
+        let timerInterval = setInterval(updateTimer, 1000);
+
+        function updateTimer() {
+            let minutes = Math.floor(timeLeft / 60);
+            let seconds = timeLeft % 60;
+            document.getElementById("timer").textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                document.getElementById("resend-btn").disabled = false;
+                document.getElementById("timer-text").textContent = "Didn't receive the code?";
+            }
+            timeLeft--;
+        }
+
+        function resendCode() {
+            $.post("resend-verification.php", function(response) {
+                alert("A new verification code has been sent to your email.");
+                location.reload(); // Reset the page and timer
+            });
+        }
+    </script>
+  
+</body>
+</html>
